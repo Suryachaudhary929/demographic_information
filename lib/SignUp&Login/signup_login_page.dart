@@ -1,4 +1,4 @@
-import 'package:demographic_information/DemographicInfo/demo_graphicinfo.dart';
+import 'package:demographic_information/DemographicInfo/demo_graphicinfo.dart'; 
 import 'package:flutter/material.dart';
 
 class SignUpandLogin extends StatefulWidget {

@@ -5,7 +5,7 @@ import 'package:demographic_information/DemographicInfo/demo_graphicinfo.dart';
 import 'package:demographic_information/Model/models.dart';
 import 'package:flutter/material.dart';
 
-// import 'package:shared_preferences/shared_preferences.dart';
+
 
 class PatientDetails extends StatefulWidget {
   const PatientDetails({super.key});

@@ -5,6 +5,7 @@ import 'package:demographic_information/DbHelper/db_helper.dart';
 import 'package:demographic_information/DemographicInfo/patient_details.dart';
 import 'package:demographic_information/Model/models.dart';
 import 'package:demographic_information/Obstacle%20Details/obstacledetails.dart';
+import 'package:demographic_information/Preview/preview_page.dart';
 import 'package:demographic_information/SystemCond&Eye%20exam/systemcond.dart';
 import 'package:demographic_information/Vision/Vision_test.dart';
 import 'package:flutter/material.dart';
@@ -1112,14 +1113,7 @@ class _TabletPageState extends State<TabletPage> {
                               });
                             }),
 
-                        // Radio<String>(
-                        //     toggleable: true,
-                        //     activeColor: Colors.blue,
-                        //     value: 'Plains',
-                        //     groupValue: radiovalue,
-                        //     onChanged: (String? value) {
-                        //       radiovalue = value.toString();
-                        //     }),
+                     
                         Text(
                           "Plains",
                           style: TextStyle(color: Colors.black),
@@ -1730,6 +1724,7 @@ class _TabletPageState extends State<TabletPage> {
                           setState(() {
                             isLoading = false;
                             _saveData();
+                            Navigator .push(context, MaterialPageRoute(builder: (context)=>PreviewPage()));
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                 elevation: 5,
                                 backgroundColor: Colors.green,
