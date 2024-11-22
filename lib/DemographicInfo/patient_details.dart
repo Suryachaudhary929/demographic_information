@@ -3,6 +3,7 @@
 import 'package:demographic_information/DbHelper/db_helper.dart';
 import 'package:demographic_information/DemographicInfo/demo_graphicinfo.dart';
 import 'package:demographic_information/Model/models.dart';
+import 'package:demographic_information/Models/db_helper.dart';
 import 'package:flutter/material.dart';
 
 
@@ -328,7 +329,7 @@ class _PatientDetailsState extends State<PatientDetails> {
                                   ],
                                 ),
                               ),
-                              
+                            
                               Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: Row(
@@ -433,6 +434,7 @@ class _PatientDetailsState extends State<PatientDetails> {
               }),
         ),
       ),
+      
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.green[700],
         onPressed: () {

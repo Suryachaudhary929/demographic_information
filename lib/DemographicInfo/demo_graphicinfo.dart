@@ -5,7 +5,6 @@ import 'package:demographic_information/DbHelper/db_helper.dart';
 import 'package:demographic_information/DemographicInfo/patient_details.dart';
 import 'package:demographic_information/Model/models.dart';
 import 'package:demographic_information/Obstacle%20Details/obstacledetails.dart';
-import 'package:demographic_information/Preview/preview_page.dart';
 import 'package:demographic_information/SystemCond&Eye%20exam/systemcond.dart';
 import 'package:demographic_information/Vision/Vision_test.dart';
 import 'package:flutter/material.dart';
@@ -106,6 +105,7 @@ class _TabletPageState extends State<TabletPage> {
 
   @override
   Widget build(BuildContext context) {
+    
     // ignore: unused_local_variable
     final Size size = MediaQuery.of(context).size;
     return Container(
@@ -533,7 +533,7 @@ class _TabletPageState extends State<TabletPage> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height:2,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 17),
@@ -1112,8 +1112,6 @@ class _TabletPageState extends State<TabletPage> {
                                 radiovalue = value.toString();
                               });
                             }),
-
-                     
                         Text(
                           "Plains",
                           style: TextStyle(color: Colors.black),
@@ -1724,7 +1722,7 @@ class _TabletPageState extends State<TabletPage> {
                           setState(() {
                             isLoading = false;
                             _saveData();
-                            Navigator .push(context, MaterialPageRoute(builder: (context)=>PreviewPage()));
+
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                 elevation: 5,
                                 backgroundColor: Colors.green,
@@ -1738,7 +1736,22 @@ class _TabletPageState extends State<TabletPage> {
                                             color: Colors.white))));
                           });
                         });
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            elevation: 5,
+                            backgroundColor: Colors.green,
+                            shape: RoundedRectangleBorder(),
+                            content:Text("please fill empty field!",style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall!
+                                        .copyWith(
+                                            fontWeight: FontWeight.w300,
+                                            color: Colors.white))
+                           
+                            )
+                            );
                       }
+                      ;
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
